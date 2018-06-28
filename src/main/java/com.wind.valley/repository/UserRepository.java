@@ -1,6 +1,6 @@
-package application.repository;
+package com.wind.valley.repository;
 
-import application.entity.User;
+import com.wind.valley.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User,Integer>{

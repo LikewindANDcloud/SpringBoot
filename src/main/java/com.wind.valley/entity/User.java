@@ -1,4 +1,4 @@
-package application.entity;
+package com.wind.valley.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.Min;

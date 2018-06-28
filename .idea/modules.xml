@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/springbootfullstack.iml" filepath="$PROJECT_DIR$/springbootfullstack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-full-stack.iml" filepath="$PROJECT_DIR$/spring-boot-full-stack.iml" />
     </modules>
   </component>
 </project>

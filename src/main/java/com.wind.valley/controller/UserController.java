@@ -1,8 +1,8 @@
-package application.controller;
+package com.wind.valley.controller;
 
-import application.entity.User;
-import application.message.ReturnMessage;
-import application.service.UserService;
+import com.wind.valley.entity.User;
+import com.wind.valley.message.ReturnMessage;
+import com.wind.valley.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;

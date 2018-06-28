@@ -1,7 +1,7 @@
-package application.service;
+package com.wind.valley.service;
 
-import application.entity.User;
-import application.repository.UserRepository;
+import com.wind.valley.entity.User;
+import com.wind.valley.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

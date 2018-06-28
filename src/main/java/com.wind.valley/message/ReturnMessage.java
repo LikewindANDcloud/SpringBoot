@@ -1,4 +1,4 @@
-package application.message;
+package com.wind.valley.message;
 
 import com.alibaba.fastjson.JSON;
 
