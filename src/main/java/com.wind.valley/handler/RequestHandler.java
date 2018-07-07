@@ -1,4 +1,4 @@
-package com.wind.valley.httphandler;
+package com.wind.valley.handler;
 
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class RequestHandler {
-    @Pointcut("execution(public * application.controller.UserController.insertUser(..))")
+    @Pointcut("execution(public * com.wind.valley.controller.UserController.insertUser(..))")
     public void common(){
 
     }

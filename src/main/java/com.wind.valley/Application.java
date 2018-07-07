@@ -12,10 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @Configuration 这三个相当于SpringBootApplication
  */
 
-//("application.controller,application.service,application.httphandler")
 @SpringBootApplication
-//(scanBasePackages = ("application.controller,application.service,application.httphandler"))//相当于下边的三个注解
-@ComponentScan(basePackages = ("application.controller,application.service,application.httphandler"))
 public class Application extends SpringBootServletInitializer {
     private static Class<Application> applicationClass = Application.class;
 

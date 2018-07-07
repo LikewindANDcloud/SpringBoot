@@ -6,6 +6,7 @@ import com.wind.valley.redis.RedisClient;
 import com.wind.valley.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,7 +20,7 @@ public class UserController {
     private UserService service;
     @Autowired
     private RedisClient redisClient;
-    @PostMapping(value = "/wind/hello")
+    @PostMapping(value = "/insertUser")
     public ReturnMessage<User> insertUser(@Valid User user, BindingResult bindResult) {
         ReturnMessage result = new ReturnMessage();
         if (bindResult.hasErrors()) {
@@ -40,5 +41,10 @@ public class UserController {
         }
 
         return result;
+    }
+
+    @PostMapping(value= "/getUser")
+    public String getUser(String name) {
+        return  redisClient.get(name);
     }
 }

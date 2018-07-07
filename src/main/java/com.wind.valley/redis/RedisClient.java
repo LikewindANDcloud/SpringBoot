@@ -17,9 +17,13 @@ public class RedisClient {
     public void set(String key,String value){
         Jedis jedis=null;
         try{
+            logger.info("active:"+jedisPool.getNumActive());
+            logger.info("idle:"+jedisPool.getNumIdle());
+            logger.info("waiter:"+jedisPool.getNumWaiters());
             jedis=jedisPool.getResource();
             jedis.set(key,value);
         }catch(Exception e){
+            logger.info(e.toString());
             logger.info("缓存服务器连接失败！");
         }finally {
             //返还到连接池
@@ -29,7 +33,7 @@ public class RedisClient {
 
     public String get(String key){
         String value = "";
-        Jedis jedis = null;
+        Jedis jedis=new Jedis("192.168.8.155",6379);
         try {
             jedis = jedisPool.getResource();
             value = jedis.get(key);
