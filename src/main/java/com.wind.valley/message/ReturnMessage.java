@@ -5,7 +5,7 @@ import com.alibaba.fastjson.JSON;
 public class ReturnMessage<T> {
     private String code;
     private String msg;
-    private T dada;
+    private T data;
 
     public String getCode() {
         return code;
@@ -16,12 +16,12 @@ public class ReturnMessage<T> {
     }
 
     public T getDada() {
-        return dada;
+        return data;
     }
 
-    public void setDada(T dada) {
-        System.out.println(JSON.toJSONString(dada));
-        this.dada = dada;
+    public void setDada(T data) {
+        System.out.println(JSON.toJSONString(data));
+        this.data = data;
     }
 
     public String getMsg() {
