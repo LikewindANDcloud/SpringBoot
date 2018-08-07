@@ -10,6 +10,7 @@
     <modules>
         <module>photography-provider</module>
         <module>photography-consumer</module>
+		<module>photography-common</module>
     </modules>
     <packaging>pom</packaging>
     <!-- Maven POM文件继承 spring-boot-starter-parent -->
