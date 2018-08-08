@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application id="photography-provider" name="photography-provider"/>
+    <dubbo:registry id="my-registry" protocol="zookeeper" address="127.0.0.1:2181"/>
+    <dubbo:protocol id="dubbo" name="dubbo" port="20880"/>
+    <dubbo:service ref="service" interface="com.wind.valley.common.service.UserService" timeout="300000" />
+</beans>

@@ -8,9 +8,9 @@
     <artifactId>spring-boot-full-stack</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
+        <module>photography-common</module>
         <module>photography-provider</module>
         <module>photography-consumer</module>
-		<module>photography-common</module>
     </modules>
     <packaging>pom</packaging>
     <!-- Maven POM文件继承 spring-boot-starter-parent -->
@@ -40,14 +40,14 @@
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
@@ -61,7 +61,17 @@
             <artifactId>jedis</artifactId>
             <version>2.8.2</version>
         </dependency>
-</dependencies>
+        <dependency>
+            <groupId>com.alibaba.spring.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>0.9</version>
+        </dependency>
+    </dependencies>
 
 <!-- Spring Boot也提供了一个可选的 Maven Plugin来创建可执行的jars -->
     <build>
@@ -69,6 +79,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.wind.valley.provider.ApplicationProvider</mainClass>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
